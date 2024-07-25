@@ -33,7 +33,6 @@ const reactionSchema = new Schema(
   }
 );
 
-// Though model schema
 const thoughtSchema = new Schema(
   {
     thoughtText: {
@@ -63,12 +62,10 @@ const thoughtSchema = new Schema(
   }
 );
 
-// get friend count
 thoughtSchema.virtual("reactionCount").get(function () {
   return this.reactions.length;
 });
 
-// Create User model with UserSchema
 const Thought = model("Thought", thoughtSchema);
-// Export Thought model
+
 module.exports = Thought;
