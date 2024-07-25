@@ -1,6 +1,4 @@
-const { model } = require("mongoose");
 const { User, Thought } = require("../models");
-const { json } = require("express/lib/response");
 
 module.exports = {
   getThought(req, res) {
